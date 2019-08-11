@@ -67,6 +67,7 @@
   !else   ## DEBUG_ENABLE_OUTPUT
     DebugLib|MdePkg/Library/BaseDebugLibNull/BaseDebugLibNull.inf
   !endif  ## DEBUG_ENABLE_OUTPUT
+  TimerLib|MdePkg/Library/BaseTimerLibNullTemplate/BaseTimerLibNullTemplate.inf
 
   DevicePathLib|MdePkg/Library/UefiDevicePathLib/UefiDevicePathLib.inf
   PeCoffGetEntryPointLib|MdePkg/Library/BasePeCoffGetEntryPointLib/BasePeCoffGetEntryPointLib.inf
@@ -81,8 +82,6 @@
   HobLib|MdePkg/Library/DxeHobLib/DxeHobLib.inf
   FileHandleLib|MdePkg/Library/UefiFileHandleLib/UefiFileHandleLib.inf
   SortLib|MdeModulePkg/Library/UefiSortLib/UefiSortLib.inf
-
-  ShellLib|ShellPkg/Library/UefiShellLib/UefiShellLib.inf
 
   CacheMaintenanceLib|MdePkg/Library/BaseCacheMaintenanceLib/BaseCacheMaintenanceLib.inf
   # OpenSSL
@@ -129,4 +128,7 @@
 #
 ##############################################################################
 !include StdLib/StdLib.inc
-!include AppPkg/Applications/Sockets/Sockets.inc
+#!include AppPkg/Applications/Sockets/Sockets.inc
+
+[BuildOptions]
+  MSFT:*_*_*_CC_FLAGS  = /W2

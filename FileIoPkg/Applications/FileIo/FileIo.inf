@@ -33,6 +33,6 @@
   ShellPkg/ShellPkg.dec
 
 [LibraryClasses]
-  LibC
+  #LibC
   LibStdio
-  DevShell
+  #DevShell

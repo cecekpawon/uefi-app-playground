@@ -33,11 +33,11 @@
   CryptoPkg/CryptoPkg.dec
 
 [LibraryClasses]
-  UefiLib
+  #UefiLib
   ShellCEntryLib
-  BaseLib
-  BaseMemoryLib
-  MemoryAllocationLib
-  DebugLib
+  #BaseLib
+  #BaseMemoryLib
+  #MemoryAllocationLib
+  #DebugLib
   BaseCryptLib
   ShellLib
